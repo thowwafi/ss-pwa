@@ -13,7 +13,7 @@ export default function Home() {
       <section className="container mx-auto px-4 mt-3">
         <h6>
           JADWAL SHOLAT
-          <span className="float-right">></span>
+          <a href="#" className="float-right">a</a>
         </h6>
         <Adzan2/>
       </section>
