@@ -28,7 +28,7 @@ export default function Nav() {
                     </g>
                     </g>
                     </svg>
-                    <span className="tab tab-kategori block text-xs">Category</span>
+                    <span className="tab tab-kategori block text-xs">Shalawat</span>
                 </a>
                 <a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
                     <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
@@ -38,7 +38,7 @@ export default function Nav() {
                         <circle stroke="currentColor" strokeWidth="2" cx="21" cy="21" r="20"></circle>
                         </g>
                         </svg>
-                    <span className="tab tab-explore block text-xs">Explore</span>
+                    <span className="tab tab-explore block text-xs">Tadarus</span>
                 </a>
                 <a href="#" className="w-full focus:text-teal-500 hover:text-teal-500 justify-center inline-block text-center pt-2 pb-1">
                     <svg width="25" height="25" viewBox="0 0 42 42" className="inline-block mb-1">
