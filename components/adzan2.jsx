@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Tabs = ({ color }) => {
+const Tabs = ({ color, schedule }) => {
   const [openTab, setOpenTab] = useState(1);
   const [openSubuh, setOpenSubuh] = useState(false);
   const [openDzuhur, setOpenDzuhur] = useState(false);
@@ -31,7 +31,7 @@ const Tabs = ({ color }) => {
                 href="#link1"
                 role="tablist"
               >
-                <i className="fas fa-space-shuttle text-xs mr-1"></i> Subuh <br/> 04.00
+                <i className="fas fa-space-shuttle text-xs mr-1"></i> Subuh <br/> {schedule.schedule.subuh}
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-1 text-center">
@@ -50,7 +50,7 @@ const Tabs = ({ color }) => {
                 href="#link2"
                 role="tablist"
               >
-                <i className="fas fa-cog text-xs mr-1"></i>  Dzuhur <br/> 04.00
+                <i className="fas fa-cog text-xs mr-1"></i>  Dzuhur <br/> {schedule.schedule.dzuhur}
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-1 text-center">
@@ -69,7 +69,7 @@ const Tabs = ({ color }) => {
                 href="#link3"
                 role="tablist"
               >
-                <i className="fas fa-briefcase text-xs mr-1"></i>  Ashar <br/> 04.00
+                <i className="fas fa-briefcase text-xs mr-1"></i>  Ashar <br/> {schedule.schedule.ashar}
               </a>
             </li>
             <li className="-mb-px mr-2 last:mr-0 flex-1 text-center">
@@ -88,7 +88,7 @@ const Tabs = ({ color }) => {
                 href="#link4"
                 role="tablist"
               >
-                <i className="fas fa-briefcase text-xs mr-1"></i>  Magrib <br/> 04.00
+                <i className="fas fa-briefcase text-xs mr-1"></i>  Magrib <br/> {schedule.schedule.magrib}
               </a>
             </li>
             <li className="-mb-px last:mr-0 flex-1 text-center">
@@ -107,7 +107,7 @@ const Tabs = ({ color }) => {
                 href="#link5"
                 role="tablist"
               >
-                <i className="fas fa-briefcase text-xs mr-1"></i>  Isya <br/> 04.00
+                <i className="fas fa-briefcase text-xs mr-1"></i>  Isya <br/> {schedule.schedule.isya}
               </a>
             </li>
           </ul>
@@ -178,10 +178,10 @@ const Tabs = ({ color }) => {
   );
 };
 
-export default function Adzan2() {
+export default function Adzan2(schedule) {
   return (
     <>
-      <Tabs color="green" />
+      <Tabs color="green" schedule={schedule}/>
     </>
   );
 }

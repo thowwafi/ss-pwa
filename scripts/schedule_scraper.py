@@ -10,12 +10,14 @@ url = "https://jadwalsholat.org/adzan/monthly.php"
 resp = requests.get(url)
 page_soup = soup(resp.content, 'html.parser')
 table_adzan = page_soup.find('table', class_='table_adzan')
-rows = table_adzan.find_all('tr', recursive=False)
+rows = table_adzan.find_all('tr', recursive=False, align='center')
 all_data = []
-for row in rows[2:-15]:
+now = datetime.now()
+now_month = "{:02d}".format(now.month)
+for row in rows[1:-1]:
     columns = row.find_all('td')
     data = {
-        "tanggal": columns[0].text.strip(),
+        "tanggal": f"{now.year}-{now_month}-{columns[0].text.strip()}",
         "imsyak": columns[1].text.strip(), 
         "subuh": columns[2].text.strip(),
         "terbit": columns[3].text.strip(),
@@ -27,7 +29,7 @@ for row in rows[2:-15]:
     }
     all_data.append(data)
 home = os.getcwd()
-year_month = f"{datetime.now().year}{datetime.now().month}"
+year_month = f"{now.year}{now.month}"
 schedule_path = os.path.join(home, f'jadwal_{year_month}.json')
 with open(schedule_path, 'w', encoding='utf-8') as f:
     json.dump(all_data, f, ensure_ascii=False, indent=4)

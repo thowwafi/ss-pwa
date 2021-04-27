@@ -5,8 +5,10 @@ import Header from '../components/header'
 import Adzan from '../components/adzan'
 import Adzan2 from '../components/adzan2'
 import Reminder from '../components/reminder'
+import jadwal from "../scripts/jadwal_20214.json"
+import moment from "moment"
 
-export default function Home() {
+export default function Home({schedule}) {
   return (
     <>
       <Header/>
@@ -15,7 +17,7 @@ export default function Home() {
           JADWAL SHOLAT
           <a href="#" className="float-right">a</a>
         </h6>
-        <Adzan2/>
+        <Adzan2 schedule={schedule}/>
       </section>
       <section className="container mx-auto px-4 mt-3">
       <h6>REMINDER</h6>
@@ -25,3 +27,15 @@ export default function Home() {
     </>
   )
 }
+
+export const getStaticProps = async () => {
+  const date_today = moment().format("YYYY-MM-DD")
+  const today_schedule = jadwal.filter(function (el) {
+    if(el.tanggal === date_today) return el;
+  });
+  return {
+    props: {
+      schedule: today_schedule[0]
+    },
+  };
+};
