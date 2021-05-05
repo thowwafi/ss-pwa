@@ -20,8 +20,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   "text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal " +
                   (openTab === 1
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-white bg-green-600"
+                    : "text-green-600 bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -39,8 +39,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   "text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal " +
                   (openTab === 2
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-white bg-green-600"
+                    : "text-green-600 bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -58,8 +58,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   "text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal " +
                   (openTab === 3
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-white bg-green-600"
+                    : "text-green-600 bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -77,8 +77,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   "text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal " +
                   (openTab === 4
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-white bg-green-600"
+                    : "text-green-600 bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
@@ -96,8 +96,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   "text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal " +
                   (openTab === 5
-                    ? "text-white bg-" + color + "-600"
-                    : "text-" + color + "-600 bg-white")
+                    ? "text-white bg-green-600"
+                    : "text-green-600 bg-white")
                 }
                 onClick={e => {
                   e.preventDefault();
