@@ -5,7 +5,7 @@ import Header from '../components/header'
 import Adzan from '../components/adzan'
 import Adzan2 from '../components/adzan2'
 import Reminder from '../components/reminder'
-import jadwal from "../scripts/jadwal_20214.json"
+import jadwal from "../scripts/jadwal_20215.json"
 import moment from "moment"
 
 export default function Home({schedule}) {
