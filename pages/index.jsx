@@ -7,6 +7,10 @@ import Adzan2 from '../components/adzan2'
 import Reminder from '../components/reminder'
 import jadwal from "../scripts/jadwal_20215.json"
 import moment from "moment"
+import Link from 'next/link'
+import Sidebar from '../components/sidebar'
+import React, { useState } from "react";
+
 
 export default function Home({schedule}) {
   return (
@@ -15,7 +19,13 @@ export default function Home({schedule}) {
       <section className="container mx-auto px-4 mt-3">
         <h6>
           JADWAL SHOLAT
-          <a href="#" className="float-right">a</a>
+          <Link as={"/reminders/"} href={"/reminders/"}>
+            <a className="float-right">
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </Link>
         </h6>
         <Adzan2 schedule={schedule}/>
       </section>
