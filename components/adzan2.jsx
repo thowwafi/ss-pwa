@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
 const Tabs = ({ color, schedule }) => {
-  const [openTab, setOpenTab] = useState(0);
+  const [openTab, setOpenTab] = useState(1);
   const [openSubuh, setOpenSubuh] = useState(false);
   const [openDzuhur, setOpenDzuhur] = useState(false);
   const [openAshar, setOpenAshar] = useState(false);
