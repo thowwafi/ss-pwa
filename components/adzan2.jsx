@@ -2,37 +2,37 @@ import React, { useState, useEffect } from 'react';
 import moment from 'moment';
 
 const Tabs = ({ color, schedule }) => {
-  const [openTab, setOpenTab] = useState(1);
+  const [openTab, setOpenTab] = useState(0);
   const [openSubuh, setOpenSubuh] = useState(false);
   const [openDzuhur, setOpenDzuhur] = useState(false);
   const [openAshar, setOpenAshar] = useState(false);
   const [openMagrib, setOpenMagrib] = useState(false);
   const [openIsya, setOpenIsya] = useState(false);
 
-  // useEffect(() => {
-  //   const timenow = new Date();
-  //   const date_today = moment().format('YYYY-MM-DD');
-  //   const subuh_time = new Date(date_today + `T${schedule.schedule.subuh}`);
-  //   const dzuhur_time = new Date(date_today + `T${schedule.schedule.dzuhur}`);
-  //   const ashar_time = new Date(date_today + `T${schedule.schedule.ashar}`);
-  //   const magrib_time = new Date(date_today + `T${schedule.schedule.magrib}`);
-  //   const isya_time = new Date(date_today + `T${schedule.schedule.isya}`);
-  //   if (timenow > subuh_time) {
-  //     setOpenTab(2);
-  //   }
-  //   if (timenow > dzuhur_time) {
-  //     setOpenTab(3);
-  //   }
-  //   if (timenow > ashar_time) {
-  //     setOpenTab(4);
-  //   }
-  //   if (timenow > magrib_time) {
-  //     setOpenTab(5);
-  //   }
-  //   if (timenow > isya_time) {
-  //     setOpenTab(1);
-  //   }
-  // }, []);
+  useEffect(() => {
+    const timenow = new Date();
+    const date_today = moment().format('YYYY-MM-DD');
+    const subuh_time = new Date(date_today + `T${schedule.schedule.subuh}`);
+    const dzuhur_time = new Date(date_today + `T${schedule.schedule.dzuhur}`);
+    const ashar_time = new Date(date_today + `T${schedule.schedule.ashar}`);
+    const magrib_time = new Date(date_today + `T${schedule.schedule.magrib}`);
+    const isya_time = new Date(date_today + `T${schedule.schedule.isya}`);
+    if (timenow > subuh_time) {
+      setOpenTab(2);
+    }
+    if (timenow > dzuhur_time) {
+      setOpenTab(3);
+    }
+    if (timenow > ashar_time) {
+      setOpenTab(4);
+    }
+    if (timenow > magrib_time) {
+      setOpenTab(5);
+    }
+    if (timenow > isya_time) {
+      setOpenTab(1);
+    }
+  }, []);
   return (
     <>
       <div className="flex flex-wrap">
@@ -46,8 +46,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   'text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal ' +
                   (openTab === 1
-                    ? 'text-white bg-' + color + '-600'
-                    : 'text-' + color + '-600 bg-white')
+                    ? 'text-white bg-green-600'
+                    : 'text-green-600 bg-white')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -66,8 +66,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   'text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal ' +
                   (openTab === 2
-                    ? 'text-white bg-' + color + '-600'
-                    : 'text-' + color + '-600 bg-white')
+                    ? 'text-white bg-green-600'
+                    : 'text-green-600 bg-white')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -86,8 +86,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   'text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal ' +
                   (openTab === 3
-                    ? 'text-white bg-' + color + '-600'
-                    : 'text-' + color + '-600 bg-white')
+                    ? 'text-white bg-green-600'
+                    : 'text-green-600 bg-white')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -106,8 +106,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   'text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal ' +
                   (openTab === 4
-                    ? 'text-white bg-' + color + '-600'
-                    : 'text-' + color + '-600 bg-white')
+                    ? 'text-white bg-green-600'
+                    : 'text-green-600 bg-white')
                 }
                 onClick={(e) => {
                   e.preventDefault();
@@ -126,8 +126,8 @@ const Tabs = ({ color, schedule }) => {
                 className={
                   'text-xs font-bold px-2 py-2 shadow-lg rounded block leading-normal ' +
                   (openTab === 5
-                    ? 'text-white bg-' + color + '-600'
-                    : 'text-' + color + '-600 bg-white')
+                    ? 'text-white bg-green-600'
+                    : 'text-green-600 bg-white')
                 }
                 onClick={(e) => {
                   e.preventDefault();
