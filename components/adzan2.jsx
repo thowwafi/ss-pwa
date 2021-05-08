@@ -9,30 +9,30 @@ const Tabs = ({ color, schedule }) => {
   const [openMagrib, setOpenMagrib] = useState(false);
   const [openIsya, setOpenIsya] = useState(false);
 
-  useEffect(() => {
-    const timenow = new Date();
-    const date_today = moment().format('YYYY-MM-DD');
-    const subuh_time = new Date(date_today + `T${schedule.schedule.subuh}`);
-    const dzuhur_time = new Date(date_today + `T${schedule.schedule.dzuhur}`);
-    const ashar_time = new Date(date_today + `T${schedule.schedule.ashar}`);
-    const magrib_time = new Date(date_today + `T${schedule.schedule.magrib}`);
-    const isya_time = new Date(date_today + `T${schedule.schedule.isya}`);
-    if (timenow > subuh_time) {
-      setOpenTab(2);
-    }
-    if (timenow > dzuhur_time) {
-      setOpenTab(3);
-    }
-    if (timenow > ashar_time) {
-      setOpenTab(4);
-    }
-    if (timenow > magrib_time) {
-      setOpenTab(5);
-    }
-    if (timenow > isya_time) {
-      setOpenTab(1);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const timenow = new Date();
+  //   const date_today = moment().format('YYYY-MM-DD');
+  //   const subuh_time = new Date(date_today + `T${schedule.schedule.subuh}`);
+  //   const dzuhur_time = new Date(date_today + `T${schedule.schedule.dzuhur}`);
+  //   const ashar_time = new Date(date_today + `T${schedule.schedule.ashar}`);
+  //   const magrib_time = new Date(date_today + `T${schedule.schedule.magrib}`);
+  //   const isya_time = new Date(date_today + `T${schedule.schedule.isya}`);
+  //   if (timenow > subuh_time) {
+  //     setOpenTab(2);
+  //   }
+  //   if (timenow > dzuhur_time) {
+  //     setOpenTab(3);
+  //   }
+  //   if (timenow > ashar_time) {
+  //     setOpenTab(4);
+  //   }
+  //   if (timenow > magrib_time) {
+  //     setOpenTab(5);
+  //   }
+  //   if (timenow > isya_time) {
+  //     setOpenTab(1);
+  //   }
+  // }, []);
   return (
     <>
       <div className="flex flex-wrap">
